@@ -13,12 +13,7 @@ A Next.js application that creates a GitHub-style contribution heatmap for Twitt
 - **Heatmap Calendar**: GitHub-style contribution calendar showing daily tweet activity
 - **Activity Statistics**: Comprehensive metrics including streaks, averages, and patterns
 - **Interactive Tooltips**: Hover over days to see detailed tweet counts and dates
-
-### 📤 Export Options
-- **PNG Export**: High-resolution image download
-- **SVG Export**: Vector format for scalability
-- **Share Feature**: Direct sharing or clipboard copy (on supported browsers)
-
+- 
 ### 🔒 Privacy-First
 - **Local Processing**: All data processing happens in your browser
 - **No Server Upload**: Your Twitter data never leaves your device
@@ -65,10 +60,6 @@ npm run dev
 - Quick overview of tweets and active days per year
 - Total summary across all years
 
-### Responsive Behavior
-- **Desktop**: Sidebar navigation for multiple years, dropdown for single year
-- **Mobile**: Always uses dropdown selector for better space efficiency
-- **Automatic**: Layout adapts based on available data and screen size
 
 ## Tech Stack
 
