@@ -68,7 +68,7 @@ export default function Home() {
               </div>
             </div>
             <a
-              href="https://github.com"
+              href="https://github.com/rohanmalik102003/twitter-heatmap"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
