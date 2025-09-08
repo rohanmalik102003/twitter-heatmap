@@ -15,8 +15,6 @@ export const FileUploader: React.FC<FileUploaderProps> = ({ onDataProcessed, onE
   const [isProcessing, setIsProcessing] = useState(false);
   const [processingStep, setProcessingStep] = useState('');
   
-  const parser = new TwitterDataParser();
-
   const handleFileUpload = useCallback(async (file: File) => {
     if (!file.name.endsWith('.zip')) {
       onError('Please upload a ZIP file containing your Twitter archive.');
@@ -27,6 +25,7 @@ export const FileUploader: React.FC<FileUploaderProps> = ({ onDataProcessed, onE
     setProcessingStep('Reading archive...');
 
     try {
+      const parser = new TwitterDataParser();
       setProcessingStep('Extracting data...');
       const result = await parser.parseArchive(file);
       
@@ -43,7 +42,7 @@ export const FileUploader: React.FC<FileUploaderProps> = ({ onDataProcessed, onE
       setIsProcessing(false);
       setProcessingStep('');
     }
-  }, [parser, onDataProcessed, onError]);
+  }, [onDataProcessed, onError]);
 
   const handleDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();

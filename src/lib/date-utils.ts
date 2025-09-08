@@ -1,4 +1,4 @@
-import { format, parse, startOfYear, endOfYear, eachDayOfInterval, isValid, getDay } from 'date-fns';
+import { format, parse, startOfYear, endOfYear, eachDayOfInterval, isValid } from 'date-fns';
 
 export const formatDate = (date: Date): string => {
   return format(date, 'yyyy-MM-dd');
@@ -22,7 +22,7 @@ export const parseTwitterDate = (twitterDate: string): Date => {
     
     // Fallback: try direct Date constructor
     return new Date(twitterDate);
-  } catch (error) {
+  } catch {
     console.warn('Failed to parse date:', twitterDate);
     return new Date();
   }

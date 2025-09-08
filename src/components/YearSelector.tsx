@@ -15,7 +15,6 @@ export const YearSelector: React.FC<YearSelectorProps> = ({
   availableYears,
   selectedYear,
   onYearChange,
-  totalTweets,
   className = ''
 }) => {
   const [isOpen, setIsOpen] = useState(false);

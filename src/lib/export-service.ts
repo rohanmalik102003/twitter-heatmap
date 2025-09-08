@@ -63,8 +63,7 @@ export class ExportService {
         throw new Error(`Element with id "${elementId}" not found`);
       }
 
-      // Get computed styles
-      const computedStyles = window.getComputedStyle(element);
+      // Get element rect
       const rect = element.getBoundingClientRect();
       
       // Create SVG

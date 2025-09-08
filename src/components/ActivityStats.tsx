@@ -156,7 +156,7 @@ export const ActivityStats: React.FC<ActivityStatsProps> = ({ stats, className =
           <h3 className="text-lg font-semibold text-gray-900 mb-3">Fun Facts</h3>
           <div className="space-y-2 text-sm text-gray-600">
             <div>
-               You've been tweeting for {stats.activeDays} days this year
+               You&apos;ve been tweeting for {stats.activeDays} days this year
             </div>
             {stats.longestStreak > 7 && (
               <div>
@@ -165,7 +165,7 @@ export const ActivityStats: React.FC<ActivityStatsProps> = ({ stats, className =
             )}
             {stats.averagePerDay > 5 && (
               <div>
-                 You're quite active with {stats.averagePerDay.toFixed(1)} tweets per day
+                 You&apos;re quite active with {stats.averagePerDay.toFixed(1)} tweets per day
               </div>
             )}
             <div>

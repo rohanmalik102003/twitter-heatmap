@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
-import { format, startOfWeek, getWeek, getMonth } from 'date-fns';
+import { format, getMonth } from 'date-fns';
 import { CalendarDay, DailyActivity } from '@/types/twitter';
 import { TwitterDataParser } from '@/lib/twitter-parser';
 
@@ -27,11 +27,10 @@ export const HeatmapCalendar: React.FC<HeatmapCalendarProps> = ({
   isLoading = false
 }) => {
   const [tooltip, setTooltip] = useState<TooltipData | null>(null);
-  const parser = new TwitterDataParser();
-
   const calendarData = useMemo(() => {
+    const parser = new TwitterDataParser();
     return parser.generateCalendarData(activities);
-  }, [activities, parser]);
+  }, [activities]);
 
   const { weeks, monthLabels } = useMemo(() => {
     const weeks: CalendarDay[][] = [];

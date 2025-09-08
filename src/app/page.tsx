@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { FileUploader } from '@/components/FileUploader';
 import HeatmapCalendar from '@/components/HeatmapCalendar';
 import { ActivityStats } from '@/components/ActivityStats';
 import { YearSelector } from '@/components/YearSelector';
 import { HeatmapData } from '@/types/twitter';
-import { Github, Twitter, AlertCircle } from 'lucide-react';
+import { Github, AlertCircle } from 'lucide-react';
 
 export default function Home() {
   const [data, setData] = useState<HeatmapData | null>(null);
@@ -52,12 +53,14 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="p-2 rounded-lg">
-  <img 
-    src="/new-2023-twitter-logo-x-icon-design_1017-45418.jpg" 
-    alt="Twitter Logo" 
-    className="w-10 h-10 rounded"
-  />
-</div>
+                <Image 
+                  src="/new-2023-twitter-logo-x-icon-design_1017-45418.jpg" 
+                  alt="Twitter Logo" 
+                  width={40}
+                  height={40}
+                  className="rounded"
+                />
+              </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
                    X Heatmap
